@@ -1,1 +1,1 @@
-# c-_practice
+Practice for C++ basics and classes
