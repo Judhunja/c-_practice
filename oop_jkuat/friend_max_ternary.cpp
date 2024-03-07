@@ -40,30 +40,15 @@ public:
 
 void max(XYZ m, ABC n, PQR t)
 {
-    if(m.x > n.a && m.x > t.p)
-    {
-        cout << m.x << endl;
-    }
-    else if(t.p > m.x && t.p > n.a)
-    {
-        cout << t.p << endl;
-    }
-    else if(n.a > m.x && n.a > t.p)
-    {
-        cout << n.a << endl;
-    }
-    else
-    {
-        cout << "Both are equal" << endl;
-    }
+    (m.x > n.a && m.x > t.p) ? cout << m.x << endl : (t.p > m.x && t.p > n.a) ? cout << t.p << endl : (n.a > m.x && n.a > t.p) ? cout << n.a << endl : cout << "All are equal" << endl;
 }
 
 int main()
 {
     ABC abc;
-    abc.setValue(30);
+    abc.setValue(50);
     XYZ xyz;
-    xyz.setValue(20);
+    xyz.setValue(50);
     PQR pqr;
     pqr.setValue(50);
     max(xyz, abc, pqr);
