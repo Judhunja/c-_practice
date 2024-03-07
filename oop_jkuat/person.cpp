@@ -31,7 +31,10 @@ int main(void) {
 };
 
 
-
+friend Class T;
+//members of a class are invoked usin dot operator
+//friend functions are called without using the object since they dont belong to that class
+//friend functions take objects as arguments
 // cin and cout are objects of the class iostream
 // cin is an object that has a getline function
 // use of getline function
