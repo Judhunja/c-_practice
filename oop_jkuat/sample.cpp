@@ -4,23 +4,28 @@ using namespace std;
 
 class Sample
 {
-int a, int b;
+    int a;
+    int b;
 public:
-void setValue(int i, int j)
-{
-    cout << "Enter first number: \n";
-    cin >> a;
-    cout << "Enter second number: \n";
-    cin >> b;
-}
-friend float sample(x, y);
+    void setValue()
+    {
+        cout << "Enter first number: ";
+        cin >> a;
+        cout << "Enter second number: ";
+        cin >> b;
+    }
+    friend float mean(Sample);
 };
 
-float sample(Sample x, Sample y)
+float mean(Sample x)
 {
-    return float((x.a + y.b) / 2);
+    return float((x.a + x.b) / 2.0);
 }
 
 int main()
 {
-    Sample sample;
+    Sample s;
+    s.setValue();
+    cout << "The average is " << mean(s) << endl;
+    return (0);
+}
